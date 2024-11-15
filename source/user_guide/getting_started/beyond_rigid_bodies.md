@@ -322,7 +322,7 @@ Expected rendered result:
 :::{warning}
 **Skinning for 2D meshes**
 
-We noticed some issues when using a 2D flat cloth mesh and set `vis_mode='visual'`, this is due to degenerated pseudo-inverse matrix computation when barycentric weights. You may notice weird visualization results in the above example if you add a non-zero euler to the cloth and use `vis_mode='visual'`. We will fix this very soon.
+We noticed some issues when using a 2D flat cloth mesh and set `vis_mode='visual'`, this is due to degenerated pseudo-inverse matrix computation when computing the barycentric weights. You may notice weird visualization results in the above example if you add a non-zero euler to the cloth and use `vis_mode='visual'`. We will fix this very soon.
 :::
 
 ***More tutorials on inter-solver coupling coming soon!***
