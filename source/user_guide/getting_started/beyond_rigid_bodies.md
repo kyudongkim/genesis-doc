@@ -226,11 +226,96 @@ horizon = 1000
 for i in range(horizon):
     scene.step()
 ```
-Note that to change the underlying physical material, all you have to do is to change the `material` attribute. Feel free to play with other material types, as well as property values in each material type.
+Note that to change the underlying physical material, all you have to do is to change the `material` attribute. Feel free to play with other material types (such as `MPM.Sand()` and `MPM.Snow()`), as well as the property values in each material type.
 
 Expected rendered result:
 <video preload="auto" controls="True" width="100%">
 <source src="https://github.com/Genesis-Embodied-AI/genesis-embodied-ai.github.io/tree/main/source/_static/videos/mpm.mp4" type="video/mp4">
 </video>
 
-### Cloth simulation with PBD Solver <a id="pbd"></a>
+## Cloth simulation with PBD Solver <a id="pbd"></a>
+
+PBD stands for Position Based Dynamics. This is also a lagrangian solver that represents entities using particles and edges, and simulates their state by solving a set of position-based constraints. It can be used to simulate 1D/2D/3D entities that preserve their topologies. In this example, we will see how to simulate cloth with PBD solver.
+
+In this example, we will add two square-shape cloth entities: one with 4 corners fixed, the other with only 1 corner fixed and falls down onto the first piece of cloth. In addition, we will render them using different `vis_mode`s.
+
+Create the scene and build:
+```python
+import genesis as gs
+
+########################## init ##########################
+gs.init()
+
+########################## create a scene ##########################
+
+scene = gs.Scene(
+    sim_options=gs.options.SimOptions(
+        dt       = 4e-3,
+        substeps = 10,
+    ),
+    viewer_options=gs.options.ViewerOptions(
+        camera_fov = 30,
+        res        = (1280, 720),
+        max_FPS    = 60,
+    ),
+    show_viewer = True,
+)
+
+########################## entities ##########################
+plane = scene.add_entity(
+    morph=gs.morphs.Plane(),
+)
+
+cloth_1 = scene.add_entity(
+    material=gs.materials.PBD.Cloth(),
+    morph=gs.morphs.Mesh(
+        file='meshes/cloth.obj',
+        scale=2.0,
+        pos=(0, 0, 0.5), 
+        euler=(0.0, 0, 0.0),
+    ),
+    surface=gs.surfaces.Default(
+        color=(0.2, 0.4, 0.8, 1.0),
+        vis_mode='visual',
+    )
+)
+
+cloth_2 = scene.add_entity(
+    material=gs.materials.PBD.Cloth(),
+    morph=gs.morphs.Mesh(
+        file='meshes/cloth.obj',
+        scale=2.0,
+        pos=(0, 0, 1.0), 
+        euler=(0.0, 0, 0.0),
+    ),
+    surface=gs.surfaces.Default(
+        color=(0.8, 0.4, 0.2, 1.0),
+        vis_mode='particle',
+    )
+)
+
+########################## build ##########################
+scene.build()
+```
+
+Then, let's fix the corners (particles) we want. To do this, we provide a handy tool to locate a particle using a location in the cartesian space:
+```python
+
+cloth_1.fix_particle(cloth_1.find_closest_particle((-1, -1, 1.0)))
+cloth_1.fix_particle(cloth_1.find_closest_particle((1, 1, 1.0)))
+cloth_1.fix_particle(cloth_1.find_closest_particle((-1, 1, 1.0)))
+cloth_1.fix_particle(cloth_1.find_closest_particle((1, -1, 1.0)))
+
+cloth_2.fix_particle(cloth_2.find_closest_particle((-1, -1, 1.0)))
+
+horizon = 1000
+for i in range(horizon):
+    scene.step()
+```
+
+Expected rendered result:
+<video preload="auto" controls="True" width="100%">
+<source src="https://github.com/Genesis-Embodied-AI/genesis-embodied-ai.github.io/tree/main/source/_static/videos/pbd_cloth.mp4" type="video/mp4">
+</video>
+
+***More tutorials on inter-solver coupling coming soon!***
