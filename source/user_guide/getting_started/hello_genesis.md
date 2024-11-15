@@ -37,10 +37,14 @@ gs.init(backend=gs.cpu)
 A more detailed example of an `gs.init()` call would look like this:
 ```python
 gs.init(
-    seed=None, precision='32', debug=False,
-    eps=1e-12, logging_level=None,
-    backend=gs_backend.gpu, theme='dark',
-    logger_verbose_time=False
+    seed                = None,
+    precision           = '32',
+    debug               = False,
+    eps                 = 1e-12,
+    logging_level       = None,
+    backend             = gs_backend.gpu,
+    theme               = 'dark',
+    logger_verbose_time = False
 )
 ```
 
