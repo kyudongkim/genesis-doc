@@ -52,17 +52,17 @@ cam = scene.add_camera(
 ```
 If `GUI=True`, each camera will create an opencv window to dynamically display the rendered image. Note that this is different from the viewer GUI.
 
-Then, once we build the scene, we can render images using the camera. Our camera supports rendering rgb image, depth, and segmentation mask. By default, only rgb is rendered, and you can turn other modes on by setting the parameters when calling `camera.render()`:
+Then, once we build the scene, we can render images using the camera. Our camera supports rendering rgb image, depth, segmentation mask and surface normals. By default, only rgb is rendered, and you can turn other modes on by setting the parameters when calling `camera.render()`:
 
-```
+```python
 scene.build()
 
 # render rgb, depth, segmentation mask and normal map
-rgb, depth, segmentation = cam.render(depth=True, segmentation=True)
+rgb, depth, segmentation, normal = cam.render(depth=True, segmentation=True, normal=True)
 ```
 
-If you used `GUI=True` and have a display connected, you should be able to see 3 windows now:
-```{figure} images/rgb_depth_seg.png
+If you used `GUI=True` and have a display connected, you should be able to see 4 windows now. (Sometimes opencv windows comes with extra delay, so you can call extra `cv2.waitKey(1)` if the windows are black, or simply call `render()` again to refresh the window.)
+```{figure} ../../_static/images/multimodal.png
 ```
 
 **Record videos using camera**
@@ -137,8 +137,8 @@ cam = scene.add_camera(
 
 scene.build()
 
-# render rgb, depth, segmentation
-# rgb, depth, segmentation = cam.render(rgb=True, depth=True, segmentation=True)
+# render rgb, depth, segmentation, and normal
+# rgb, depth, segmentation, normal = cam.render(rgb=True, depth=True, segmentation=True, normal=True)
 
 cam.start_recording()
 import numpy as np

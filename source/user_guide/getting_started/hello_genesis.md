@@ -1,6 +1,6 @@
 # 👋🏻 Hello, Genesis
 
-```{figure} images/hello_genesis.png
+```{figure} ../../_static/images/hello_genesis.png
 ```
 In this tutorial, we will go through a basic example that loads a single Franka arm and then let it fall freely onto the floor, and use this example to illustrate the core steps for creating a simulation experiment in genesis, and some basic concepts:
 
@@ -116,13 +116,13 @@ During genesis's development, we have tried to support as many file extensions a
 If you want to load a Franka arm using an external **URDF** file, you can simply change the morph to `gs.morphs.URDF(file='urdf/panda_bullet/panda.urdf', fixed=True)`. Note that unlike MJCF file which already specifies the joint type connecting the robot's base link and the `world`, URDF file doesn't come with this information. Therefore, by default the base link of a URDF robot tree is disconnected from the `world` (or more precisely, connected to `world` via a `free` 6-dof joint). Therefore, we need to additionally specify `fixed=True` for `morphs.URDF` and `morphs.Mesh` if you want the base link to be fixed.
 
 
-#### Build The Scene and Start Simulating
+#### Build the scene and start simulating
 ```Python
 scene.build()
 for i in range(1000):
     scene.step()
 ```
-Now that everything has been added, we can start the simulation. Note that we now need to ***build** the scene first by calling `scene.build()`. This is because genesis uses just-in-time (JIT) technology to compile GPU kernels on the fly for each run, so we need an explicit step to initiate this process, which puts everything in place, allocates device memory, and creates underlying data fields for simulation.
+Now that everything has been added, we can start the simulation. Note that we now need to ***build*** the scene first by calling `scene.build()`. This is because genesis uses just-in-time (JIT) technology to compile GPU kernels on the fly for each run, so we need an explicit step to initiate this process, which puts everything in place, allocates device memory, and creates underlying data fields for simulation.
 
 Once the scene is built, an interactive viewer will pop up to visualize the scene. The viewer comes with various keyboard shortcuts for video recording, screenshot, switching between different visualization modes, etc. We will discuss more details on visualization later in this tutorial.
 
@@ -130,9 +130,9 @@ Once the scene is built, an interactive viewer will pop up to visualize the scen
 :::{note}
 **Kernel compilation and caching**
 
-Due to the nature of JIT, each time you create a scene with a new configuration (i.e. different robot types, different number of objects, etc.), genesis needs to re-compile the GPU kernels on the fly. Genesis supports auto-caching of compiled kernels, so after the first run (as long as it exits normally or is terminated via `ctrl + c`, not `ctrl + \`), if the scene configuration stays the same, we will load from cached kernels from previous runs to speed up the scene creation process.
+Due to the nature of JIT, each time you create a scene with a new configuration (i.e. different robot types, different number of objects, etc.), genesis needs to re-compile the GPU kernels on the fly. Genesis supports auto-caching of compiled kernels, so after the first run (as long as it exits normally or is killed via `ctrl + c`, **not** `ctrl + \`), if the scene configuration stays the same, we will load from cached kernels from previous runs to speed up the scene creation process.
 
-We are actively working on optimizing this compilation step by adding techniques like parallel compilation and faster kernel serialization, so we expect to keep optimizing the efficiency of this step in future releases.
+We are actively working on optimizing this compilation step by adding techniques like parallel compilation and faster kernel serialization, so we expect to greatly speed up the speed of this step in future releases.
 :::
 
 

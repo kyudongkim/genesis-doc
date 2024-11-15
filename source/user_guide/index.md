@@ -20,7 +20,7 @@ getting_started/visualization
 getting_started/control_your_robot
 getting_started/parallel_simulation
 getting_started/inverse_kinematics_motion_planning
-getting_started/collision_contacts_forces
+getting_started/advanced_ik
 getting_started/beyond_rigid_bodies
 getting_started/command_line_tools
 ```
@@ -31,6 +31,7 @@ getting_started/command_line_tools
 :maxdepth: 1
 
 advanced_topics/concepts
+getting_started/collision_contacts_forces
 advanced_topics/differentiable_simulation
 advanced_topics/collision_representation
 advanced_topics/solvers_and_coupling

@@ -1,6 +1,6 @@
 # 🚀 Parallel Simulation
 
-```{figure} images/parallel_sim.png
+```{figure} ../../_static/images/parallel_sim.png
 ```
 
 The biggest advantage of using GPU to accelerate simulation is to enable scene-level parallelism, so that we can train robots in thousands of environments simultaneously.
