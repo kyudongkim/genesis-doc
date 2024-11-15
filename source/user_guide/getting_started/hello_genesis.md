@@ -113,7 +113,7 @@ When loading from external files, you need to specify the file location using th
 During genesis's development, we have tried to support as many file extensions as we can, including support for loading their associated textures for rendering. If you would like us to support any other file types not listed above, or if you find your texture is not being loaded or rendered correctly, feel free to submit a feature request!
 :::
 
-If you want to load a Franka arm using an external **URDF** file, you can simply change the morph to `gs.morphs.URDF(file='urdf/panda_bullet/panda.urdf', fixed=True)`. Note that unlike MJCF file which already specifies the joint type connecting the robot's base link and the `world`, URDF file doesn't come with this information. Therefore, by default the base link of a URDF robot tree is disconnected from the `world` (or more precisely, connected to `world` via a `free` 6-dof joint). Therefore, we need to additionally specify `fixed=True` for `morphs.URDF` and `morphs.Mesh` if you want the base link to be fixed.
+If you want to load a Franka arm using an external **URDF** file, you can simply change the morph to `gs.morphs.URDF(file='urdf/panda_bullet/panda.urdf', fixed=True)`. Note that unlike MJCF file which already specifies the joint type connecting the robot's base link and the `world`, URDF file doesn't come with this information. Therefore, by default, the base link of a URDF robot tree is disconnected from the `world` (or more precisely, connected to `world` via a `free` 6-dof joint). Therefore, we need to additionally specify `fixed=True` for `morphs.URDF` and `morphs.Mesh` if we want the base link to be fixed.
 
 
 #### Build the scene and start simulating
@@ -130,7 +130,7 @@ Once the scene is built, an interactive viewer will pop up to visualize the scen
 :::{note}
 **Kernel compilation and caching**
 
-Due to the nature of JIT, each time you create a scene with a new configuration (i.e. different robot types, different number of objects, etc.), genesis needs to re-compile the GPU kernels on the fly. Genesis supports auto-caching of compiled kernels, so after the first run (as long as it exits normally or is killed via `ctrl + c`, **not** `ctrl + \`), if the scene configuration stays the same, we will load from cached kernels from previous runs to speed up the scene creation process.
+Due to the nature of JIT, each time you create a scene with a new configuration (i.e. different robot types, different number of objects, etc. that involves size change of the internal data structure), genesis needs to re-compile the GPU kernels on the fly. Genesis supports auto-caching of compiled kernels: after the first run (as long as it exits normally or is killed via `ctrl + c`, **not** `ctrl + \`), if the scene configuration stays the same, we will load from cached kernels from previous runs to speed up the scene creation process.
 
 We are actively working on optimizing this compilation step by adding techniques like parallel compilation and faster kernel serialization, so we expect to greatly speed up the speed of this step in future releases.
 :::
