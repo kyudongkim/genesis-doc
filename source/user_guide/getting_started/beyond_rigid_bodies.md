@@ -148,7 +148,7 @@ MPM solver is a very powerful physics solver that supports a wider range of mate
 In this example, let's create three objects:
 - An elastic cube, visualized as `'particles'`
 - A liquid cube, visualized as `'particles'`
-- An elastoplastic sphere, visualized as the original sphere mesh, but deformed based on the internal particle state (`vis_mode='visual'`)
+- An elastoplastic sphere, visualized as the original sphere mesh, but deformed based on the internal particle state (`vis_mode='visual'`). Such process that maps internal particle state to a deformed visual mesh is called *skinning* in computer graphics.
 
 Complete code script:
 ```python
@@ -317,5 +317,12 @@ Expected rendered result:
 <video preload="auto" controls="True" width="100%">
 <source src="https://github.com/Genesis-Embodied-AI/genesis-embodied-ai.github.io/tree/main/source/_static/videos/pbd_cloth.mp4" type="video/mp4">
 </video>
+
+
+:::{warning}
+**Skinning for 2D meshes**
+
+We noticed some issues when using a 2D flat cloth mesh and set `vis_mode='visual'`, this is due to degenerated pseudo-inverse matrix computation when barycentric weights. You may notice weird visualization results in the above example if you add a non-zero euler to the cloth and use `vis_mode='visual'`. We will fix this very soon.
+:::
 
 ***More tutorials on inter-solver coupling coming soon!***
