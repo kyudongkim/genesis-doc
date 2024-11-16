@@ -4,8 +4,7 @@
 
 ```{figure} _static/images/demo.png
 ```
-
-Genesis is a physical platform designed for general purpose *Robotics/Embodied AI/Physical AI* applications. It is simultaneously multiple things:
+Genesis is a comprehensive physics simulation platform designed for general purpose *Robotics/Embodied AI/Physical AI* applications. It is simultaneously multiple things:
 1. A **universal physics engine** re-built from the ground up, capable of simulating a wide range of materials and physical phenomena.
 2. A **lightweight**, **ultra-fast**, **pythonic**, and **user-friendly** robotics simulation platform.
 3. A powerful and fast **photo-realistic rendering system**.
