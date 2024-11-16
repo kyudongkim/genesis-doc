@@ -16,7 +16,7 @@ Powered by a universal physics engine re-designed and re-built from the ground u
 
 Genesis is built and continuously evolves with the following ***long-term missions***:
 1. **Lowering the barrier** to using physics simulations and making robotics research accessible to everyone. (See our [manifesto](our_manifesto.md) here)
-2. **Unifying a wide spectrum of state-of-the-art physics solvers** into a single framework, allowing re-creating the whole physical world in a virtual realm with the highest possible physical, visual and sensory fidelity, using the most up-to-date simulation techniques.
+2. **Unifying a wide spectrum of state-of-the-art physics solvers** into a single framework, allowing re-creating the whole physical world in a virtual realm with the highest possible physical, visual and sensory fidelity, using the most advanced simulation techniques.
 3. **Minimizing human effort** in collecting and generating data for robotics and other domains, letting the data flywheel spin on its own.
 
 ```{toctree}
