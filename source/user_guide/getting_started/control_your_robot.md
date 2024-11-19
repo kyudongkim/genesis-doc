@@ -159,7 +159,7 @@ At the end of each step, we print two types of forces: `get_dofs_control_force()
 If everything goes right, this is what you should see:
 
 <video preload="auto" controls="True" width="100%">
-<source src="https://github.com/Genesis-Embodied-AI/genesis-embodied-ai.github.io/tree/main/source/_static/videos/control_your_robot.mp4" type="video/mp4">
+<source src="https://github.com/Genesis-Embodied-AI/genesis-doc/raw/main/source/_static/videos/control_your_robot.mp4" type="video/mp4">
 </video>
 
 

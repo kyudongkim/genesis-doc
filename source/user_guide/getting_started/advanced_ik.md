@@ -85,13 +85,8 @@ for i in range(0, 2000):
 This is what you will see:
 
 <video preload="auto" controls="True" width="100%">
-<source src="https://github.com/haosulab/ManiSkill/raw/main/docs/source/_static/videos/teleop-stackcube-demo.mp4" type="video/mp4">
+<source src="https://github.com/Genesis-Embodied-AI/genesis-doc/raw/main/source/_static/videos/ik_multilink.mp4" type="video/mp4">
 </video>
-
-<!-- <video preload="auto" controls="True" width="100%">
-<source src="https://github.com/Genesis-Embodied-AI/genesis-embodied-ai.github.io/tree/main/source/_static/videos/ik_multilink.mp4" type="video/mp4">
-</video> -->
-
 
 Here are a few new things we hope you could learn in this example:
 - we used `robot.inverse_kinematics_multilink()` API for solving IK considering multiple target links. When using this API, we pass in a list of target link objects, a list of target positions, and a list of target orientations (quats).
@@ -162,5 +157,5 @@ for i in range(0, 1000):
 When dealing with parallel envs, all you have to do is make sure you insert an extra batch dimension into your target pose variables.
 
 <video preload="auto" controls="True" width="100%">
-<source src="https://github.com/Genesis-Embodied-AI/genesis-embodied-ai.github.io/tree/main/source/_static/videos/batched_IK.mp4" type="video/mp4">
+<source src="https://github.com/Genesis-Embodied-AI/genesis-doc/raw/main/source/_static/videos/batched_IK.mp4" type="video/mp4">
 </video>

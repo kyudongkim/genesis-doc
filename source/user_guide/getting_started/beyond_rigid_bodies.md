@@ -72,7 +72,7 @@ You may also note that we passed in an extra attribute -- `surface`. This attrib
 
 Once you run this successfully, you will see the water drops and spreads over the plane, but constrained within the solver boundary:
 <video preload="auto" controls="True" width="100%">
-<source src="https://github.com/Genesis-Embodied-AI/genesis-embodied-ai.github.io/tree/main/source/_static/videos/sph_liquid.mp4" type="video/mp4">
+<source src="https://github.com/Genesis-Embodied-AI/genesis-doc/raw/main/source/_static/videos/sph_liquid.mp4" type="video/mp4">
 </video>
 
 You can get the real-time particle positions by:
@@ -230,7 +230,7 @@ Note that to change the underlying physical material, all you have to do is to c
 
 Expected rendered result:
 <video preload="auto" controls="True" width="100%">
-<source src="https://github.com/Genesis-Embodied-AI/genesis-embodied-ai.github.io/tree/main/source/_static/videos/mpm.mp4" type="video/mp4">
+<source src="https://github.com/Genesis-Embodied-AI/genesis-doc/raw/main/source/_static/videos/mpm.mp4" type="video/mp4">
 </video>
 
 ## Cloth simulation with PBD Solver <a id="pbd"></a>
@@ -315,7 +315,7 @@ for i in range(horizon):
 
 Expected rendered result:
 <video preload="auto" controls="True" width="100%">
-<source src="https://github.com/Genesis-Embodied-AI/genesis-embodied-ai.github.io/tree/main/source/_static/videos/pbd_cloth.mp4" type="video/mp4">
+<source src="https://github.com/Genesis-Embodied-AI/genesis-doc/raw/main/source/_static/videos/pbd_cloth.mp4" type="video/mp4">
 </video>
 
 

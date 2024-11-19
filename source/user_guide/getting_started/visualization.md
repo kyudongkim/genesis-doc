@@ -90,7 +90,7 @@ cam.stop_recording(save_to_filename='video.mp4', fps=60)
 You will have the video saved to `video.mp4`:
 
 <video preload="auto" controls="True" width="100%">
-<source src="https://github.com/Genesis-Embodied-AI/genesis-embodied-ai.github.io/tree/main/source/_static/videos/cam_record.mp4" type="video/mp4">
+<source src="https://github.com/Genesis-Embodied-AI/genesis-doc/raw/main/source/_static/videos/cam_record.mp4" type="video/mp4">
 </video>
 
 
