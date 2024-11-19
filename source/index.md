@@ -1,7 +1,5 @@
 # Genesis
 
-
-
 ```{figure} _static/images/demo.png
 ```
 Genesis is a comprehensive physics simulation platform designed for general purpose *Robotics/Embodied AI/Physical AI* applications. It is simultaneously multiple things:
