@@ -81,11 +81,16 @@ for i in range(0, 2000):
     robot.set_dofs_position(q)
     scene.visualizer.update()
 ```
+
 This is what you will see:
 
 <video preload="auto" controls="True" width="100%">
-<source src="https://github.com/Genesis-Embodied-AI/genesis-embodied-ai.github.io/tree/main/source/_static/videos/ik_multilink.mp4" type="video/mp4">
+<source src="https://github.com/haosulab/ManiSkill/raw/main/docs/source/_static/videos/teleop-stackcube-demo.mp4" type="video/mp4">
 </video>
+
+<!-- <video preload="auto" controls="True" width="100%">
+<source src="https://github.com/Genesis-Embodied-AI/genesis-embodied-ai.github.io/tree/main/source/_static/videos/ik_multilink.mp4" type="video/mp4">
+</video> -->
 
 
 Here are a few new things we hope you could learn in this example:
