@@ -72,10 +72,10 @@ html_theme_options = {
 html_context = {
     "display_github": True,
     "github_user": "genesis-embodied-ai",
-    "github_repo": "Genesis",
+    "github_repo": "genesis-doc",
     "github_version": "main",
     "conf_py_path": "/source/",
-    "doc_path": "docs/source"
+    "doc_path": "/source"
 }
 html_css_files = [
     'css/custom.css',
