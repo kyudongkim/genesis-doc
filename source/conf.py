@@ -1,5 +1,4 @@
 import os
-
 import genesis as gs
 
 __version__ = gs.__version__

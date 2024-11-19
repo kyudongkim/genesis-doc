@@ -1,6 +1,6 @@
 # 🧗 Advanced and Parallel IK
 
-The IK solver is Genesis has a lot of powerful features. In this example, we will show how you can configure your IK solver to accept more flexible target pose, and how you can solve for robots in a batched setting.
+The IK solver in Genesis has a lot of powerful features. In this example, we will show how you can configure your IK solver to accept more flexible target pose, and how you can solve for robots in a batched setting.
 
 ### IK with multiple end-effector links
 
