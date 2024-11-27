@@ -135,10 +135,12 @@ git submodule update --init --recursive
         By default, we use optix deoniser. If you need OIDN, append `-D LUISA_COMPUTE_DOWNLOAD_OIDN=ON`.
     - If you used conda dependencies (2.B)
         ```
+        export CONDA_INCLUDE_PATH=path/to/anaconda/include
         cd ./ext/LuisaRender
-        cmake -S . -B build -D CMAKE_BUILD_TYPE=Release -D PYTHON_VERSIONS=3.9 -D LUISA_COMPUTE_DOWNLOAD_NVCOMP=ON -D LUISA_COMPUTE_ENABLE_GUI=OFF -D ZLIB_INCLUDE_DIR=/home/xianz1/anaconda3/envs/genesis/include
+        cmake -S . -B build -D CMAKE_BUILD_TYPE=Release -D PYTHON_VERSIONS=3.9 -D LUISA_COMPUTE_DOWNLOAD_NVCOMP=ON -D LUISA_COMPUTE_ENABLE_GUI=OFF -D ZLIB_INCLUDE_DIR=$CONDA_INCLUDE_PATH
         cmake --build build -j $(nproc)
         ```
+        The `CONDA_INCLUDE_PATH` typically looks like: `/home/user/anaconda3/envs/genesis/include`
 ### 4. FAQs
 - Assertion 'lerror’ failed: Failed to write to the process: Broken pipe:
   You may need to use CUDA of the same version as compiled.
