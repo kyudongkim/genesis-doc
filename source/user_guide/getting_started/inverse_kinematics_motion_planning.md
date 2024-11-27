@@ -45,6 +45,9 @@ motors_dof = np.arange(7)
 fingers_dof = np.arange(7, 9)
 
 # set control gains
+# Note: the following values are tuned for achieving best behavior with Franka
+# Typically, each new robot would have a different set of parameters.
+# Sometimes high-quality URDF or XML file would also provide this and will be parsed.
 franka.set_dofs_kp(
     np.array([4500, 4500, 3500, 3500, 2000, 2000, 2000, 100, 100]),
 )
@@ -62,6 +65,7 @@ franka.set_dofs_force_range(
 Next, let's move the robot's end-effector to a pre-grasping pose. This is done by two steps:
 - using IK to solve the joint position given a target end-effector pose
 - using a motion planner to reach the target position
+  
 Motion planning in genesis uses OMPL library. You can install it following the instructions in the [installation](../overview/installation.md) page.
 
 IK and motion planning in Genesis are as simple as you could imagine: each can be done via a single function call:
