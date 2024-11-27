@@ -68,7 +68,7 @@ Next, let's move the robot's end-effector to a pre-grasping pose. This is done b
   
 Motion planning in genesis uses OMPL library. You can install it following the instructions in the [installation](../overview/installation.md) page.
 
-IK and motion planning in Genesis are as simple as you could imagine: each can be done via a single function call:
+IK and motion planning in Genesis are as simple as it can get: each can be done via a single function call.
 ```python
 
 # get the end-effector link
@@ -96,7 +96,7 @@ for i in range(100):
     scene.step()
 
 ```
-As you can see, both IK solving and motion planning are two integrated methods of the robot entity. For IK solving, you simply tell the robot's IK solver which link is the end-effector, and specify the target pose. Then, you tell the motion planner the target joint position (qpos) and it will returned a planned and smoothed list of waypoints. Note that after we execute the path, we let the controller run for another 100 steps. This is because we are using a PD controller, and there will be a gap between the desired target position and the current position, therefore, we let the controller run a bit longer so that the robot can reach the last waypoint in the planned trajectory.
+As you can see, both IK solving and motion planning are two integrated methods of the robot entity. For IK solving, you simply tell the robot's IK solver which link is the end-effector, and specify the target pose. Then, you tell the motion planner the target joint position (qpos) and it will return a planned and smoothed list of waypoints. Note that after we execute the path, we let the controller run for another 100 steps. This is because we are using a PD controller, and there will be a gap between the desired target position and the current position. Therefore, we let the controller run a bit longer so that the robot can reach the last waypoint in the planned trajectory.
 
 Next, we move the robot gripper down, grasp the cube, and lift it:
 ```python
