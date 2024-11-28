@@ -10,6 +10,6 @@ pip install -e ".[docs]"
 2. Build the documentation and watch the change lively
 
 ```bash
-# In docs/
+# In doc/
 rm -rf build/; make html; sphinx-autobuild ./source ./build/html
 ```
