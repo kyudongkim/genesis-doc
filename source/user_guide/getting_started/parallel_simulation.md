@@ -116,6 +116,8 @@ for i in range(1000):
 ```
 
 Running the above script on a desktop with RTX 4090 and 14900K gives you a futuristic simulation speed -- over **43 million** frames per second, this is 430,000 faster than real-time. Enjoy!
+```{figure} ../../_static/images/parallel_speed.png
+```
 
 :::{tip}
 **FPS logging:** By default, genesis logger will display real-time simulation speed in the terminal. You can disable this behavior by setting `show_FPS=False` when creating the scene.
