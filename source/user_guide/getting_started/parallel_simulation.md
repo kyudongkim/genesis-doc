@@ -28,7 +28,6 @@ scene = gs.Scene(
     ),
     rigid_options = gs.options.RigidOptions(
         dt                = 0.01,
-        constraint_solver = gs.constraint_solver.Newton, # Newton solver is faster than the default conjugate gradient (CG) solver.
     ),
 )
 
@@ -49,7 +48,9 @@ scene.build(n_envs=B, env_spacing=(1.0, 1.0))
 
 # control all the robots
 franka.control_dofs_position(
-    position = torch.zeros(B, 9, device=gs.device)
+    torch.tile(
+        torch.tensor([0, 0, 0, -1.0, 0, 0, 0, 0.02, 0.02], device=gs.device), (B, 1)
+    ),
 )
 
 for i in range(1000):
@@ -65,7 +66,7 @@ Recall that we use APIs such as `franka.control_dofs_position()` in the previous
 ```python
 franka.control_dofs_position(torch.zeros(B, 9, device=gs.device))
 ```
-Since we are running simulation on GPU, in order to reduce data transfer overhead between cpu and gpu, here we use torch tensors selected using `gs.device` instead of numpy arrays (but numpy array will also work). This could bring noticeable performance boost when you are dealing with a huge batch size.
+Since we are running simulation on GPU, in order to reduce data transfer overhead between cpu and gpu, we can use torch tensors selected using `gs.device` instead of numpy arrays (but numpy array will also work). This could bring noticeable performance gain when you need to send a tensor with a huge batch size frequently.
 
 The above call will control all the robots in the batched envs. If you want to control only a subset of environments, you can additionally pass in `envs_idx`, but make sure the size of the `position` tensor's batch dimension matches the length of `envs_idx`:
 ```python
@@ -87,9 +88,9 @@ import genesis as gs
 gs.init(backend=gs.gpu)
 
 scene = gs.Scene(
+    show_viewer   = False,
     rigid_options = gs.options.RigidOptions(
         dt                = 0.01,
-        constraint_solver = gs.constraint_solver.Newton, # Newton solver is faster than the default conjugate gradient (CG) solver.
     ),
 )
 
@@ -104,13 +105,17 @@ franka = scene.add_entity(
 scene.build(n_envs=30000)
 
 # control all the robots
-franka.control_dofs_position(torch.zeros(B, 9, device=gs.device))
+franka.control_dofs_position(
+    torch.tile(
+        torch.tensor([0, 0, 0, -1.0, 0, 0, 0, 0.02, 0.02], device=gs.device), (B, 1)
+    ),
+)
 
 for i in range(1000):
     scene.step()
 ```
 
-Running the above script on a desktop with RTX 4090 and 14900K gives you a futuristic simulation speed -- over 50 million frames per second, this is 500,000 faster than real-time. Enjoy!
+Running the above script on a desktop with RTX 4090 and 14900K gives you a futuristic simulation speed -- over **43 million** frames per second, this is 430,000 faster than real-time. Enjoy!
 
 :::{tip}
 **FPS logging:** By default, genesis logger will display real-time simulation speed in the terminal. You can disable this behavior by setting `show_FPS=False` when creating the scene.
