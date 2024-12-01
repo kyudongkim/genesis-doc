@@ -128,7 +128,7 @@ git submodule update --init --recursive
 - Build LuisaRender and its python binding:
     - If you used system dependencies (2.A)
         ```
-        cd ./ext/LuisaRender
+        cd genesis/ext/LuisaRender
         cmake -S . -B build -D CMAKE_BUILD_TYPE=Release -D PYTHON_VERSIONS=3.9 -D LUISA_COMPUTE_DOWNLOAD_NVCOMP=ON -D LUISA_COMPUTE_ENABLE_GUI=OFF 
         cmake --build build -j $(nproc)
         ```
