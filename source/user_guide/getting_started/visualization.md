@@ -28,7 +28,7 @@ scene = gs.Scene(
     renderer = gs.renderers.Rasterizer(), # using rasterizer for camera rendering
 )
 ```
-Here we can specify the pose and fov of the viewer camera. The viewer will run as fast as possible if `max_FPS` is set to `None`. If `res` is set to None, genesis will automatically create a 4:3 window, which has a width equal to half of your monitor width. Also note that in the above setting, we set to use rasterization backend for camera rendering. Genesis provides two rendering backends: `gs.renderers.Rasterizer()` and `gs.renderers.RayTracer()`. The viewer always uses the rasterizer. By default, camera also uses rasterizer.
+Here we can specify the pose and fov of the viewer camera. The viewer will run as fast as possible if `max_FPS` is set to `None`. If `res` is set to None, genesis will automatically create a 4:3 window with the height set to half of your display height. Also note that in the above setting, we set to use rasterization backend for camera rendering. Genesis provides two rendering backends: `gs.renderers.Rasterizer()` and `gs.renderers.RayTracer()`. The viewer always uses the rasterizer. By default, camera also uses rasterizer.
 
 
 Once the scene is created, you can access the viewer object via `scene.visualizer.viewer`, or simply `scene.viewer` as a shortcut. You can query or set the viewer camera pose:

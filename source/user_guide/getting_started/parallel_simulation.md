@@ -24,7 +24,6 @@ scene = gs.Scene(
         camera_pos    = (3.5, -1.0, 2.5),
         camera_lookat = (0.0, 0.0, 0.5),
         camera_fov    = 40,
-        res           = (1920, 1080),
     ),
     rigid_options = gs.options.RigidOptions(
         dt                = 0.01,

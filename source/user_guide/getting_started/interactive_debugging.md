@@ -2,8 +2,7 @@
 
 We designed a very informative (and good-looking, hopefully) interface for accessing internal information and all the available attributes of objects created in Genesis, implemented via the `__repr__()` method for all the Genesis classes. This feature will be very useful if you are used to debugging via either `IPython` or `pdb` or `ipdb`.
 
-We will show you a simple example here:
-
+Let's use `IPython` in this example. Install it via `pip install ipython` if you don't have it. Let's go through a simple example here:
 ```python
 import genesis as gs
 
