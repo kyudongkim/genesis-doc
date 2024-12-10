@@ -7,7 +7,7 @@
 overview/what_is_genesis
 overview/why_a_new_simulator
 overview/installation
-overview/our_manifesto
+overview/mission
 ```
 
 
@@ -35,6 +35,7 @@ advanced_topics/concepts
 getting_started/collision_contacts_forces
 advanced_topics/differentiable_simulation
 advanced_topics/collision_representation
+advanced_topics/sparse_computation
 advanced_topics/solvers_and_coupling
 advanced_topics/locomotion
 advanced_topics/drone
