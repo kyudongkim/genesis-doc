@@ -1,6 +1,8 @@
-# 🦿 Locomotion
+# 🦿 Training Locomotion Policies with RL
 
-Genesis supports parallel simulation, making it ideal for training reinforcement learning (RL) locomotion policies efficiently. In this tutorial, we use the Unitree Go2 robot as an example to train a walking policy from scratch. This tutorial is inspired by and builds upon concepts from [Legged Gym](https://github.com/leggedrobotics/legged_gym)
+Genesis supports parallel simulation, making it ideal for training reinforcement learning (RL) locomotion policies efficiently. In this tutorial, we will walk you through a complete training example for obtaining a basic locomotion policy that enables a Unitree Go2 Robot to walk. With Genesis, you will be able to get a working locomotion policy in under 35 seconds (benchmarked on a RTX 4090), and the policy is able to transfer to real-world robot.
+
+**Acknowledgement**: This tutorial is inspired by and builds several core concepts from [Legged Gym](https://github.com/leggedrobotics/legged_gym).
 
 ## Environment Overview
 We start by creating a gym-style environment (go2-env).
@@ -74,3 +76,5 @@ You should see a GUI similar to this:
 <video preload="auto" controls="True" width="100%">
 <source src="https://github.com/Genesis-Embodied-AI/genesis-doc/raw/main/source/_static/videos/locomotion_eval.mp4" type="video/mp4">
 </video>
+
+If you happen to have a real Unitree Go2 robot by your side, you can try to deploy the policy. Have fun!
