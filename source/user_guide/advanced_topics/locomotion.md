@@ -70,6 +70,7 @@ Finally, let's roll out the trained policy. Run the following command:
 python examples/locomotion/go2_eval.py
 ```
 You should see a GUI similar to this:
+
 <video preload="auto" controls="True" width="100%">
 <source src="https://github.com/Genesis-Embodied-AI/genesis-doc/raw/main/source/_static/videos/locomotion_eval.mp4" type="video/mp4">
 </video>
