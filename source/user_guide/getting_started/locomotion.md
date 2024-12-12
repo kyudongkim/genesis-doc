@@ -64,7 +64,8 @@ To monitor the training process, launch TensorBoard:
 tensorboard --logdir logs
 ```
 You should see a training curve similar to this:
-
+```{figure} ../../_static/images/locomotio_curve.png
+```
 
 ## Evaluation
 Finally, let's roll out the trained policy. Run the following command:
@@ -78,3 +79,7 @@ You should see a GUI similar to this:
 </video>
 
 If you happen to have a real Unitree Go2 robot by your side, you can try to deploy the policy. Have fun!
+
+<video preload="auto" controls="True" width="100%">
+<source src="https://github.com/Genesis-Embodied-AI/genesis-doc/raw/main/source/_static/videos/locomotion_real.mp4" type="video/mp4">
+</video>
