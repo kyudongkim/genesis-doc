@@ -12,7 +12,7 @@ Genesis is a comprehensive physics simulation platform designed for general purp
 Powered by a universal physics engine re-designed and re-built from the ground up, Genesis integrates various physics solvers and their coupling into a unified framework. This core physics engine is further enhanced by a generative agent framework that operates at an upper level, aiming towards fully **automated data generation** for robotics and beyond.
 
 Genesis is built and continuously evolves with the following ***long-term missions***:
-1. **Lowering the barrier** to using physics simulations and making robotics research accessible to everyone. (See our [manifesto](our_manifesto.md) here)
+1. **Lowering the barrier** to using physics simulations and making robotics research accessible to everyone. (See our [commitment](mission.md))
 2. **Unifying a wide spectrum of state-of-the-art physics solvers** into a single framework, allowing re-creating the whole physical world in a virtual realm with the highest possible physical, visual and sensory fidelity, using the most advanced simulation techniques.
 3. **Minimizing human effort** in collecting and generating data for robotics and other domains, letting the data flywheel spin on its own.
 
