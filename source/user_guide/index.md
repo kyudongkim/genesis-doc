@@ -24,6 +24,7 @@ getting_started/advanced_ik
 getting_started/beyond_rigid_bodies
 getting_started/interactive_debugging
 getting_started/command_line_tools
+getting_started/locomotion
 ```
 
 
@@ -37,8 +38,6 @@ advanced_topics/differentiable_simulation
 advanced_topics/collision_representation
 advanced_topics/sparse_computation
 advanced_topics/solvers_and_coupling
-advanced_topics/locomotion
 advanced_topics/drone
-advanced_topics/parallel_RL_training
 advanced_topics/soft_robots
 ```

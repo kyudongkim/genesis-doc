@@ -71,6 +71,7 @@ When creating the `Liquid` material, we set `sampler='pbs'`. This configures how
 You may also note that we passed in an extra attribute -- `surface`. This attribute is used to define all the visual properties of the entity. Here, we set the color of the water to be blueish, and chose to visualize it as particles by setting `vis_mod='particle'`.
 
 Once you run this successfully, you will see the water drops and spreads over the plane, but constrained within the solver boundary:
+
 <video preload="auto" controls="True" width="100%">
 <source src="https://github.com/Genesis-Embodied-AI/genesis-doc/raw/main/source/_static/videos/sph_liquid.mp4" type="video/mp4">
 </video>
@@ -229,6 +230,7 @@ for i in range(horizon):
 Note that to change the underlying physical material, all you have to do is to change the `material` attribute. Feel free to play with other material types (such as `MPM.Sand()` and `MPM.Snow()`), as well as the property values in each material type.
 
 Expected rendered result:
+
 <video preload="auto" controls="True" width="100%">
 <source src="https://github.com/Genesis-Embodied-AI/genesis-doc/raw/main/source/_static/videos/mpm.mp4" type="video/mp4">
 </video>
@@ -314,6 +316,7 @@ for i in range(horizon):
 ```
 
 Expected rendered result:
+
 <video preload="auto" controls="True" width="100%">
 <source src="https://github.com/Genesis-Embodied-AI/genesis-doc/raw/main/source/_static/videos/pbd_cloth.mp4" type="video/mp4">
 </video>
