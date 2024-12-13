@@ -1,10 +1,7 @@
 import os
-try:
-    import genesis as gs
-except AttributeError:
-    pass
 
-__version__ = gs.__version__
+
+__version__ = '0.0.1'
 # Configuration file for the Sphinx documentation builder.
 #
 # For the full list of built-in configuration values, see the documentation:
