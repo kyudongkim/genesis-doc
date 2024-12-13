@@ -36,3 +36,4 @@ numba
 pymeshlab
 pymeshfix
 genesis-world-nightly
+torch

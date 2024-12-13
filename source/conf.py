@@ -86,5 +86,4 @@ autodoc_typehints = "signature"
 autodoc_typehints_description_target = "all"
 autodoc_default_flags = ['members', 'show-inheritance', 'undoc-members']
 autodoc_member_order = "bysource"
-
 autosummary_generate = True
