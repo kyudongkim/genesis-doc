@@ -83,9 +83,11 @@ for i in range(1000):
     scene.step()
 ```
 This is what you will see:
+
 <video preload="auto" controls="True" width="100%">
 <source src="https://github.com/Genesis-Embodied-AI/genesis-doc/raw/main/source/_static/videos/muscle.mp4" type="video/mp4">
 </video>
+
 Most of the code is pretty standard compared to instantiating regular deformable entities. There are only two small differences that do the trick:
 
 * When instantiating soft robots `robot_mpm` and `robot_fem`, we use materials `gs.materials.MPM.Muscle` and `gs.materials.FEM.Muscle` respectively.
@@ -155,6 +157,7 @@ for i in range(1000):
     scene.step()
 ```
 This is what you will see:
+
 <video preload="auto" controls="True" width="100%">
 <source src="https://github.com/Genesis-Embodied-AI/genesis-doc/raw/main/source/_static/videos/worm.mp4" type="video/mp4">
 </video>
@@ -261,6 +264,7 @@ for i in range(1000):
     scene.step()
 ```
 This is what you will see:
+
 <video preload="auto" controls="True" width="100%">
 <source src="https://github.com/Genesis-Embodied-AI/genesis-doc/raw/main/source/_static/videos/hybrid_robot.mp4" type="video/mp4">
 </video>
