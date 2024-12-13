@@ -1,7 +1,7 @@
 import os
 try:
     import genesis as gs
-except ImportError:
+except AttributeError:
     pass
 
 __version__ = gs.__version__
