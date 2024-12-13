@@ -1,5 +1,5 @@
 import os
-import genesis as gs
+import genesis-world-nightly as gs
 
 __version__ = gs.__version__
 # Configuration file for the Sphinx documentation builder.
