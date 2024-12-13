@@ -1,9 +1,5 @@
 import os
-import importlib
-import sys
-pkg = importlib.import_module('genesis-world-nightly')
-sys.modules['gs'] = pkg
-import gs
+import genesis as gs
 
 __version__ = gs.__version__
 # Configuration file for the Sphinx documentation builder.
