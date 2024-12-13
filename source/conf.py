@@ -1,5 +1,8 @@
 import os
-import genesis as gs
+try:
+    import genesis as gs
+except ImportError:
+    pass
 
 __version__ = gs.__version__
 # Configuration file for the Sphinx documentation builder.
