@@ -39,6 +39,3 @@ genesis-world-nightly
 torch
 PyOpenGL
 PyOpenGL_accelerate
-libgl1-mesa-glx
-libglew-dev
-freeglut3-dev
