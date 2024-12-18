@@ -35,7 +35,7 @@ moviepy
 numba
 pymeshlab
 pymeshfix
-genesis-world-nightly == 0.0.2
+genesis-world
 torch
 PyOpenGL
 PyOpenGL_accelerate
