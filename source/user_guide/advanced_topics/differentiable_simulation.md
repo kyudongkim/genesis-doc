@@ -1,5 +1,7 @@
 # 🪐 Differentiable Simulation
 
+(Under construction. More details coming soon)
+
 ## genesis.Tensor
 We now have our own tensor data type: `genesis.Tensor()`, for the following reasons:
 - to ensure a consistent user experience :)
@@ -35,5 +37,4 @@ There exist a few minor differences though:
     If `tensor.scene` is `None`, `tensor.backward()` behaves identically to a torch tensor's `backward()`. Otherwise, it will allow gradient flow back to `tensor.scene` and trigger upstream gradient flow.
 - To resemble torch's behavior like `nn.Module.zero_grad()` or `optimizer.zero_grad()`, you can also do `tensor.zero_grad()` with a genesis tensor.
 
-**NB**: This is just a initial implementation and subject to future changes if needed. Suggestions are welcome.
 
