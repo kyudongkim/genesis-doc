@@ -24,7 +24,7 @@ getting_started/advanced_ik
 getting_started/beyond_rigid_bodies
 getting_started/interactive_debugging
 getting_started/locomotion
-advanced_topics/soft_robots
+getting_started/soft_robots
 getting_started/command_line_tools
 ```
 
@@ -34,7 +34,7 @@ getting_started/command_line_tools
 :maxdepth: 1
 
 advanced_topics/concepts
-getting_started/collision_contacts_forces
+advanced_topics/collision_contacts_forces
 advanced_topics/differentiable_simulation
 advanced_topics/collision_representation
 advanced_topics/sparse_computation
