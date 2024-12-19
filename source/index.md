@@ -18,6 +18,8 @@ Genesis is built and will continuously evolve with the following ***long-term mi
 2. **Unifying a wide spectrum of state-of-the-art physics solvers** into a single framework, allowing re-creating the whole physical world in a virtual realm with the highest possible physical, visual and sensory fidelity, using the most advanced simulation techniques.
 3. **Minimizing human effort** in collecting and generating data for robotics and other domains, letting the data flywheel spin on its own.
 
+Project Page: [https://genesis-embodied-ai.github.io/](https://genesis-embodied-ai.github.io/)
+
 ## Key Features
 Compared to prior simulation platforms, here we highlight several key features of Genesis:
 - 🐍 **100% Python**, both front-end interface and back-end physics engine, all natively developed in python.
