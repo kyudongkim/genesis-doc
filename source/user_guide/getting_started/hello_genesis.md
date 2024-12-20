@@ -88,7 +88,7 @@ When creating the morph, you can additionally specify its position, orientation,
 ```python
 franka = scene.add_entity(
     gs.morphs.MJCF(
-        file  = 'xml/franka_emika_panda/panda.xml'
+        file  = 'xml/franka_emika_panda/panda.xml',
         pos   = (0, 0, 0),
         euler = (0, 0, 90), # we follow scipy's extrinsic x-y-z rotation convention, in degrees,
         # quat  = (1.0, 0.0, 0.0, 0.0), # we use w-x-y-z convention for quaternions,
