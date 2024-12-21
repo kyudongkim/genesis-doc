@@ -26,7 +26,7 @@ The `reset_idx` function resets the initial pose and state buffers of the specif
 #### Step
 The `step` function takes the action for execution and returns new observations and rewards. Here is how it works:
 1. **Action Execution**.
-    The input action will be clipped, rescaled, and added on top of default motor positions. The transformed action, representing target joint positions, will then be sent to robto controller for one step execution.
+    The input action will be clipped, rescaled, and added on top of default motor positions. The transformed action, representing target joint positions, will then be sent to the robot controller for one-step execution.
 2. **State Updates**.
     Robot states, such as joint positions and velocities, are retrieved and stored in buffers.
 3. **Termination Checks**.
