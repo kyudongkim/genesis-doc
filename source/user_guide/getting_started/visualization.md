@@ -154,7 +154,7 @@ cam.stop_recording(save_to_filename='video.mp4', fps=60)
 ```
 ## Photo-realistic Ray Tracing Rendering
 
-Genesis provides a raytracing rendering backend for photorealistic rendering. You can easily switch to using this backend by setting `renderer=gs.renderers.RayTracer()` when creating the scene. This camera allows more parameter adjustment, such as `spp`, `aperture`, `model`, etc.
+Genesis provides a ray tracing rendering backend for photorealistic rendering. You can easily switch to using this backend by setting `renderer=gs.renderers.RayTracer()` when creating the scene. This camera allows more parameter adjustment, such as `spp`, `aperture`, `model`, etc.
 
 ### Setup
 
