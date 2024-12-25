@@ -1,6 +1,10 @@
 # 🦿 Training Locomotion Policies with RL
 
-Genesis supports parallel simulation, making it ideal for training reinforcement learning (RL) locomotion policies efficiently. In this tutorial, we will walk you through a complete training example for obtaining a basic locomotion policy that enables a Unitree Go2 Robot to walk. With Genesis, you will be able to train a locomotion policy that's **deployable in real-world in less than 26 seconds** (benchmarked on a RTX 4090).
+Genesis supports parallel simulation, making it ideal for training reinforcement learning (RL) locomotion policies efficiently. In this tutorial, we will walk you through a complete training example for obtaining a basic locomotion policy that enables a Unitree Go2 Robot to walk. 
+
+This is a simple and minimal example that demonstrates a very basic RL training pipeline in Genesis, and with the following example you will be able to obtain a quadruped locomotion policy that's deployable to a real robot very quickly.
+
+**Note**: This is *NOT* a comprehensive locomotion policy training pipeline. It uses simplified reward terms to get you started easily, and does not exploit Genesis's speed on big batchsizes, so it only serves basic demonstration purposes.
 
 **Acknowledgement**: This tutorial is inspired by and builds several core concepts from [Legged Gym](https://github.com/leggedrobotics/legged_gym).
 
