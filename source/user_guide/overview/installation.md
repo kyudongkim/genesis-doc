@@ -60,9 +60,9 @@ git submodule update --init --recursive
 ### 2. Dependencies 
 
 #### 2.A: If you have sudo access. Preferred.
-**NB**: It seems compilation only works on Ubuntu 20.04+, As vulkan 1.2+ is needed and 18.04 only supports 1.1, but I haven't fully checked this...
+**NB**: It seems that compilation only works on Ubuntu 20.04+, As vulkan 1.2+ is needed and 18.04 only supports 1.1, but we haven't fully checked this...
 
-- upgrade `g++` and `gcc` to version 11
+- Upgrade `g++` and `gcc` to version 11
     ```
     sudo apt install build-essential manpages-dev software-properties-common
     sudo add-apt-repository ppa:ubuntu-toolchain-r/test
@@ -74,17 +74,21 @@ git submodule update --init --recursive
     g++ --version
     gcc --version
     ```
-- cmake
+- CMake
     ```
-    # if you system's cmake version is under 3.18, uninstall that and reinstall via snap
+    # if your system's cmake version is under 3.18, uninstall that and reinstall via snap
     sudo snap install cmake --classic
     ```
-- CUDA
-    - You need to install a system-wide cuda (Now 12.0+).
-        - download https://developer.nvidia.com/cuda-11-7-0-download-archive
-        - Install cuda toolkit.
-        - reboot
-- rust
+- CUDA, a system-wide CUDA 12.0+ is needed.
+    - Download on https://developer.nvidia.com/cuda-12-1-0-download-archive
+    - Install CUDA Toolkit.
+    - Reboot.
+    
+    ```
+    # verify
+    nvcc --version
+    ```
+- Rust
     ```
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
     sudo apt-get install patchelf
@@ -102,13 +106,13 @@ git submodule update --init --recursive
     ```
     sudo apt-get install xorg-dev libglu1-mesa-dev
     ```
-- pybind
-    ```
-    pip install "pybind11[global]"
-    ```
 - libsnappy
     ```
     sudo apt-get install libsnappy-dev
+    ```
+- pybind
+    ```
+    pip install "pybind11[global]"
     ```
 #### 2.B: If you have no sudo.
 - conda dependencies
