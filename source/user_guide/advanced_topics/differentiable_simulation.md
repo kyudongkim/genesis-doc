@@ -6,8 +6,8 @@
 We now have our own tensor data type: `genesis.Tensor()`, for the following reasons:
 - to ensure a consistent user experience :)
 - it enables end-to-end gradient flow from loss all the way back to action input
-- it removes need for specifying datatype (though you still can) when creaing tensors. The datatype specified when calling gs.init() will be used when creating genesis tensors.
-- provides additional safety checks, such as contiguous check and check if tensors from different Scene are accidently being merged into the same computation graph.
+- it removes need for specifying datatype (though you still can) when creating tensors. The datatype specified when calling gs.init() will be used when creating genesis tensors.
+- provides additional safety checks, such as contiguous check and check if tensors from different Scene are accidentally being merged into the same computation graph.
 - supports other potential customizations if we need.
 
 This is essentially a subclass of pytorch tensors, so users can simply treat it as torch tensors and apply different kinds of torch operations.
