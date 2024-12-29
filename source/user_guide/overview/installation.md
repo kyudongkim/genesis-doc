@@ -23,12 +23,12 @@ Supported features on various systems are as follows:
 </div>
 
 ## Installation
-1. Genesis is available via PyPI:
+1. Install **PyTorch** following the [official instructions](https://pytorch.org/get-started/locally/).
+
+2. Install Genesis via PyPI:
     ```bash
     pip install genesis-world
     ```
-
-2. Install **PyTorch** following the [official instructions](https://pytorch.org/get-started/locally/).
 
 :::{note}
 If you are using Genesis with CUDA, make sure appropriate nvidia-driver is installed on your machine.
