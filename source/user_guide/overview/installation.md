@@ -30,6 +30,10 @@ Supported features on various systems are as follows:
 
 2. Install **PyTorch** following the [official instructions](https://pytorch.org/get-started/locally/).
 
+:::{note}
+If you are using Genesis with CUDA, make sure appropriate nvidia-driver is installed on your machine.
+:::
+
 
 ## (Optional) Motion planning
 Genesis integrated OMPL's motion planning functionalities and wraps it using a intuitive API for effortless motion planning. If you need the built-in motion planning capability, download pre-compiled OMPL wheel [here](https://github.com/ompl/ompl/releases/tag/prerelease), and then `pip install` it.
